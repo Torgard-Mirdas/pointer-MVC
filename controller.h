@@ -1,7 +1,7 @@
 #ifndef CLICKER_CONTROLLER_H
 #define CLICKER_CONTROLLER_H
-#include "clicker_model.h"
-#include "clicker_view.h"
+#include "model.h"
+#include "view.h"
 
 
 class ClickerController {
@@ -13,4 +13,4 @@ public:
     void run();
 };
 
-#endif // CLICKER_CONTROLLER_H
+#endif 

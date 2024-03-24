@@ -1,5 +1,5 @@
-#ifndef CLICKER_VIEW_H
-#define CLICKER_VIEW_H
+#ifndef VIEW_H
+#define VIEW_H
 
 class ClickerView {
 public:
@@ -8,4 +8,4 @@ public:
     void displayExitMessage();
 };
 
-#endif // CLICKER_VIEW_H
+#endif 

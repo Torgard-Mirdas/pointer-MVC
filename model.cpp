@@ -1,4 +1,4 @@
-#include "clicker_model.h"
+#include "model.h"
 
 ClickerModel::ClickerModel() : points(0) {}
 

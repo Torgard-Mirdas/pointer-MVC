@@ -1,5 +1,5 @@
-#ifndef CLICKER_MODEL_H
-#define CLICKER_MODEL_H
+#ifndef MODEL_H
+#define MODEL_H
 
 class ClickerModel {
 private:
@@ -12,4 +12,4 @@ public:
     int getPoints() const;
 };
 
-#endif // CLICKER_MODEL_H
+#endif 

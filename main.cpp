@@ -1,4 +1,4 @@
-#include "clicker_controller.h"
+#include "controller.h"
 
 int main() {
     ClickerController controller;

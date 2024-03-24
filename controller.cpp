@@ -1,13 +1,13 @@
 #include <iostream>
-#include "clicker_controller.h"
-#include "clicker_model.h"
-#include "clicker_view.h"
+#include "controller.h"
+#include "model.h"
+#include "view.h"
 
 void ClickerController::run() {
     char input;
 
-    std::cout << "Witaj w klikerze!\n";
-    std::cout << "Kliknij 'b', aby zdobyć punkt. Naciśnij 'e', aby wyjść.\n";
+    std::cout << "Welcome " << std::endl;
+    std::cout << "Press 'b' to gain a point. Press 'e' to exit."<<std::endl;
 
     while (true) {
         std::cin >> input;
