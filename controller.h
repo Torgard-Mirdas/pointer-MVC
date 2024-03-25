@@ -1,5 +1,5 @@
-#ifndef CLICKER_CONTROLLER_H
-#define CLICKER_CONTROLLER_H
+#ifndef CONTROLLER_H
+#define CONTROLLER_H
 #include "model.h"
 #include "view.h"
 
