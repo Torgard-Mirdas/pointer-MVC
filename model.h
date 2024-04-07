@@ -1,5 +1,6 @@
 #ifndef MODEL_H
 #define MODEL_H
+#include <string>
 
 class ClickerModel {
 private:
@@ -11,7 +12,9 @@ public:
 
     void incrementPoints();
     int getPoints() const;
-    int getLevel() const; 
+    int getLevel() const;
+    void saveGameState(const std::string& filename) const;
+    void loadGameState(const std::string& filename);
 };
 
 #endif

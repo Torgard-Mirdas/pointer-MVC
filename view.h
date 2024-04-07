@@ -8,7 +8,8 @@ public:
     void displayPoints(int points, int level);
     void displayInvalidInputMessage();
     void displayExitMessage();
-    std::string toRoman(int value); 
+    std::string toRoman(int value);
+    void showGameStateSavedMessage(const std::string& filename) const;
 };
 
 #endif 

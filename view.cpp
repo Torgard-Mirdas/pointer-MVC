@@ -40,3 +40,7 @@ std::string ClickerView::toRoman(int value) {
     }
     return result;
 }
+
+void ClickerView::showGameStateSavedMessage(const std::string& filename) const {
+    std::cout << "Game state saved to " << filename << std::endl;
+}
