@@ -44,3 +44,16 @@ std::string ClickerView::toRoman(int value) {
 void ClickerView::showGameStateSavedMessage(const std::string& filename) const {
     std::cout << "Game state saved to " << filename << std::endl;
 }
+
+void ClickerView::dispFilenameToSave(){
+    std::cout<<"Enter filename to save: "<< std::endl;
+}
+void ClickerView::dispFilenameToLoad(){
+    std::cout << "Enter filename to load: "<< std::endl;
+}
+
+void ClickerView::dispWelcomeMessage(){
+
+    std::cout << "Press 'b' to gain a point. Press 'e' to exit. Press 's' to save. Press 'l' to load" << std::endl;
+
+}

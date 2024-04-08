@@ -10,6 +10,9 @@ public:
     void displayExitMessage();
     std::string toRoman(int value);
     void showGameStateSavedMessage(const std::string& filename) const;
+    void dispFilenameToSave();
+    void dispFilenameToLoad();
+    void dispWelcomeMessage();
 };
 
 #endif 

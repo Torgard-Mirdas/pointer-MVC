@@ -40,3 +40,7 @@ void ClickerModel::loadGameState(const std::string& filename) {
         std::cerr << "Unable to open file " << filename << " for reading." << std::endl;
     }
 }
+
+//void ClickerModel::getFilename(){
+  //  std::cin<<filename;
+//}

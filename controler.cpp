@@ -14,30 +14,33 @@ void ClickerController::loadGameState(const std::string& filename) {
 
 void ClickerController::run() {
     char input;
-
     std::cout << "Welcome " << std::endl;
-    std::cout << "Press 'b' to gain a point. Press 'e' to exit." << std::endl;
-
+    view.dispWelcomeMessage();
     while (true) {
         std::cin >> input;
 
         if (input == 'b') {
             model.incrementPoints();
             view.displayPoints(model.getPoints(), model.getLevel());
+           // view.dispWelcomeMessage();
         } else if (input == 'e') {
             view.displayExitMessage();
             break;
         }else if (input == 's') {
             std::string filename;
-            std::cout << "Enter filename to save: ";
+            view.dispFilenameToSave();
             std::cin >> filename;
+            filename += ".txt";
             saveGameState(filename);
+            view.dispWelcomeMessage();
         } else if (input == 'l') {
             std::string filename;
-            std::cout << "Enter filename to load: ";
+            view.dispFilenameToLoad();
             std::cin >> filename;
+            filename += ".txt";
             loadGameState(filename);
             view.displayPoints(model.getPoints(), model.getLevel());
+            view.dispWelcomeMessage();
         }else {
             view.displayInvalidInputMessage();
         }
