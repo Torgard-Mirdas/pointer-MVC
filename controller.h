@@ -4,6 +4,7 @@
 #include "view.h"
 #include <string>
 
+using namespace std;
 
 class ClickerController {
 private:

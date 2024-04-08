@@ -2,6 +2,8 @@
 #include <fstream>
 #include <iostream>
 
+using namespace std;
+
 ClickerModel::ClickerModel() : points(0), level(1) {}
 
 void ClickerModel::incrementPoints() {
@@ -44,3 +46,31 @@ void ClickerModel::loadGameState(const std::string& filename) {
 //void ClickerModel::getFilename(){
   //  std::cin<<filename;
 //}
+
+std::string ClickerModel::toRoman(int value) {
+    struct romandata_t { int value; std::string numeral; };
+    const struct romandata_t romandata[] = {
+            1000, "M",
+            900, "CM",
+            500, "D",
+            400, "CD",
+            100, "C",
+            90, "XC",
+            50, "L",
+            40, "XL",
+            10, "X",
+            9, "IX",
+            5, "V",
+            4, "IV",
+            1, "I"
+    };
+
+    std::string result;
+    for (const auto& data : romandata) {
+        while (value >= data.value) {
+            result += data.numeral;
+            value -= data.value;
+        }
+    }
+    return result;
+}

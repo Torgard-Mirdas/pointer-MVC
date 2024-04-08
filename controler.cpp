@@ -3,6 +3,8 @@
 #include "model.h"
 #include "view.h"
 
+using namespace std;
+
 void ClickerController::saveGameState(const std::string& filename) const {
     model.saveGameState(filename);
     view.showGameStateSavedMessage(filename);
@@ -21,7 +23,7 @@ void ClickerController::run() {
 
         if (input == 'b') {
             model.incrementPoints();
-            view.displayPoints(model.getPoints(), model.getLevel());
+            view.displayPoints(model.getPoints(), model.toRoman(model.getLevel()));
            // view.dispWelcomeMessage();
         } else if (input == 'e') {
             view.displayExitMessage();
@@ -39,7 +41,7 @@ void ClickerController::run() {
             std::cin >> filename;
             filename += ".txt";
             loadGameState(filename);
-            view.displayPoints(model.getPoints(), model.getLevel());
+            view.displayPoints(model.getPoints(), model.toRoman(model.getLevel()));
             view.dispWelcomeMessage();
         }else {
             view.displayInvalidInputMessage();
